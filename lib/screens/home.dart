@@ -38,47 +38,48 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[200],
+      backgroundColor: Colors.black87,
       body: Column(
         children: [
           Expanded(
-            child: Container(
+            child: SizedBox(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 55,
                   ),
                   Container(
-                      padding: EdgeInsets.all(25),
+                      padding: const EdgeInsets.all(25),
                       alignment: Alignment.centerLeft,
                       child: Text(
                         userquestion,
-                        style: TextStyle(
-                          fontSize: 30,
-                        ),
+                        style:
+                            const TextStyle(fontSize: 30, color: Colors.white),
                       )),
                   Container(
-                      padding: EdgeInsets.all(25),
+                      padding: const EdgeInsets.all(25),
                       alignment: Alignment.centerRight,
                       child: Text(
                         useranswer,
-                        style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.bold),
+                        style: const TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       )),
                 ],
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Expanded(
             flex: 2,
-            child: Container(
+            child: SizedBox(
               child: GridView.builder(
                   itemCount: buttons.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 4),
                   itemBuilder: (BuildContext context, int index) {
                     if (index == 0) {

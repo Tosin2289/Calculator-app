@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  final color;
+  final Color? color;
   final String btntext;
-  final buttoncolor;
-  final buttonTapped;
+  final Color? buttoncolor;
+  final Function()? buttonTapped;
   const MyButton({
     Key? key,
     required this.color,
